@@ -1,6 +1,62 @@
+<<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Veloura | Handmade Candles </title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Georgia,serif;background:#fbf6ef;color:#392b24}
+header{padding:22px 18px;text-align:center;background:#f0e4d5}
+header h1{font-size:32px;letter-spacing:5px;margin:0}
+header p{font-size:12px;letter-spacing:2px;margin:8px 0 0}
+.hero{padding:48px 22px;text-align:center;background:linear-gradient(135deg,#e6d2bc,#f8eee2)}
+.hero h2{font-size:35px;margin:0 0 14px}
+.hero p{line-height:1.7;max-width:420px;margin:0 auto 22px}
+.btn{display:inline-block;background:#654735;color:white;text-decoration:none;padding:13px 20px;border-radius:3px;font-family:Arial,sans-serif;font-size:14px}
+section{padding:30px 16px}
+section h2{text-align:center;font-size:27px;font-weight:normal}
+.products{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.product{background:#fffdf9;padding:10px 10px 16px;text-align:center;border:1px solid #eadfd2}
+.product img{width:100%;height:155px;object-fit:cover;background:#eee0d0}
+.product h3{font-size:17px;margin:12px 0 7px}
+.price{font-family:Arial,sans-serif;font-weight:bold;margin-bottom:12px}
+.product .btn{padding:10px 9px;font-size:12px}
+.note{text-align:center;line-height:1.8;padding:10px 22px 35px}
+footer{text-align:center;padding:22px;background:#392b24;color:#fff1e2;font-size:13px}
+</style>
+</head>
+<body>
+<header><h1>VELOURA</h1><p>HANDMADE WITH LOVE</p></header>
+<div class="hero">
+<h2>Light up your moments.</h2>
+<p>Handcrafted candles to make your home warmer, your evenings softer, and every gift more special.</p>
+<a class="btn" href="#collection">EXPLORE OUR CANDLES</a>
+</div>
+<section id="collection">
+<h2>Our Collection</h2>
+<div class="products">
+<div class="product"><img src="https://images.unsplash.com/photo-1603006905003-be475563bc59?auto=format&fit=crop&w=500&q=80" alt="Warm scented candle"><h3>Vanilla Glow</h3><div class="price">₹299</div><a class="btn order">Order Now</a></div>
+<div class="product"><img src="https://images.unsplash.com/photo-1602874801007-bd458bb1b8b6?auto=format&fit=crop&w=500&q=80" alt="Decorative candle"><h3>Rose Serenity</h3><div class="price">₹349</div><a class="btn order">Order Now</a></div>
+<div class="product"><img src="https://images.unsplash.com/photo-1602523961358-f9f03dd557db?auto=format&fit=crop&w=500&q=80" alt="Handmade candle"><h3>Amber Nights</h3><div class="price">₹399</div><a class="btn order">Order Now</a></div>
+<div class="product"><img src="https://images.unsplash.com/photo-1603905179139-d6a5a3a0a5c0?auto=format&fit=crop&w=500&q=80" alt="Candle gift"><h3>Gift of Calm</h3><div class="price">₹499</div><a class="btn order">Order Now</a></div>
+</div>
+</section>
+<div class="note"><h2>A little glow, a lot of love.</h2><p>Perfect for gifting, slow evenings, and beautiful spaces.</p><p>UPI payment accepted. Delivery charges apply to every order.</p></div>
 <footer>
   VELOURA · Handmade with love<br><br>
   UPI ID: veloura@upi<br>
   Contact: <a href="tel:+918126477204" style="color:#fff1e2;">+91 81264 77204</a><br>
   To order, message us on <a href="https://wa.me/918126477204" target="_blank" style="color:#fff1e2;">WhatsApp</a>.
 </footer>
+<script>
+const phone = "918126477204";
+document.querySelectorAll(".order").forEach((link,i)=>{
+const names=["Vanilla Glow","Rose Serenity","Amber Nights","Gift of Calm"];
+const prices=["299","349","399","499"];
+link.href="https://wa.me/"+phone+"?text="+encodeURIComponent("Hi Veloura! I would like to order "+names[i]+" (₹"+prices[i]+"). Please share payment and delivery details.");
+link.target="_blank";
+});
+</script>
+</body>
+</html>
